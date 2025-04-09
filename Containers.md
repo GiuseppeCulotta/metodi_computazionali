@@ -49,5 +49,30 @@ Proprietà e regole per il buon uso:
 * i dizionari sono modificabili, quindi posso aggiungere e/o eliminare e/o cambiare i loro elementi 'key:value'
 * sono molto ottimizzati
 
+Comandi utili:
+	
+	* a = dict() crea un dizionario e lo chiama 'a'
+	* list(a.items()) fa una lista degli elementi (key) del dizionario 'a' con i rispettivi numeri (value) associati
+	* zip(a,b) la funzione "zip" prende due containers e li associa in tuple di due elementi (come se stessi facendo il prodotto cartesiano di due spazi vettoriali accoppiando il primo elemento del primo spazio con il primo elemento del secondo spazio, e cos' via). Se i due containers hanno diversa dimensione, la funzione zip si ferma alla minima dimensione fra le due.
+	* posso lavorare con un elemento del dizionario come faccio con le liste. In questo caso però, l'indice non sarà un numero ma la 'key'. Es. a['key1'] = 5 + 8
+	* a["ciao"] = 55 aggiungo al dictionary un elemento con la key = ciao e il value = 55
+	* print("Eggs" a) darà il valore True se la key 'Eggs' è presente nel dictionary a; altrimenti False
+	* del a['ciao'] elimina l'elemento che ha key 'ciao'
+	* 
+	
+Posso costruire dei dictionaries all'interno delle liste/tuple, mettedo ('key', value) [la parola chiave va messa tra le virgolette singole]
 
+Di default, non posso accedere ad elementi della lista che non esistono; quindi è importnate, all'interno del codice, scrivere in modo corretto le 'key' a cui si fa riferimento e, in primis, dare ad esse un nome breve ma comprensibile.
 
+Posso creare un dictionary all'interno di un altro dictionary: es. fridge_dict = {'Yogurt': 4, 'Tofu': 2, 'Vegetables': {'celeriac': 0.5, 'onions': 2, 'cherry_tomatoes': 42}}. la categoria 'Vegetables' ha un dizionario ad essa collegato. Se volessi eliminare un elemento di solo questa categoria dovrei usare il comando:
+	
+	* del fridge_dict['Vegetables':['celeriac']]
+
+# Sets
+Sono come i dictionaries ma senza valori (solo key) e sono disordinati. Sono usati per sapere se qualcosa esiste/è presente evitando ripetizioni. Soto ottimizzati per operazioni matematiche tra insiemi.
+
+* Creazione: a = set()
+* dati due set a e b, come negli insiemi in matematica, posso unirli col comando: c = a.union(b) creando così il set 'c' che è l'unione di a e b.
+* Intersezione: d = a.intersection(b)
+* differenza: e = a - b
+* 
