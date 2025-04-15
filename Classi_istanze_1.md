@@ -29,4 +29,5 @@ class nomeclasse:
 #Chiamata della funzione o degli elementi
 {self.attributo1} per richiamare l'attributo1 della classe nomeclasse 
 
-
+# Variabili di Istanza vs Variabili di Classe
+Le variabili di istanza, sono quelle che valgono per una singola funzione della classe (es. self.attributo1). Le variabili di classe, sono attributi che vengono condivisi da tutte le istanze della classe. Alle variabili di classe si può accedere sia con le istanze sia senza le istanza (cioè mettendo self.eccc); questo perchè python, quando non trova una variabile/attributo nell'insieme delle variabili di istanza, la va a cercare nelle variabili di classe. Accedere alla variabile di classe tramite l'istanza mi serve per modificare quella variabile per un singolo elemento della classe (es. ore settimanali da aggiungere ad uno studente. Per fare ciò uso: studente_uno.ore_settimanali += 4). Uso quindi la notazione: nome_elemento.variabile_di_classe = valore_nuovo. 
